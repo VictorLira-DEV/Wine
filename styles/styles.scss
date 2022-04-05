@@ -1,0 +1,26 @@
+@import './header';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: sans-serif;
+}
+
+.app {
+    max-width: 1920px;
+    margin: 0 auto;
+
+    .container {
+        max-width: 1092px;
+        height: 100%;
+        margin: 0 auto;
+    }
+}
+
+.hidden {
+    display: none;
+}

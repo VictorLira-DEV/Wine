@@ -1,0 +1,134 @@
+@font-face {
+    font-family: 'neoSans';
+    src: url('../fonts/NeoSansStdTR.ttf') format('truetype');
+}
+
+.header {
+    height: 350px;
+    width: 100%;
+    padding: 20px;
+    position: relative;
+    color: #ffffff;
+    &__slider_controls {
+        height: 300px;
+        position: relative;
+        h1 {
+            font-family: neoSans;
+            text-align: center;
+            line-height: 7.3;
+            font-size: 2.5rem;
+        }
+    }
+
+    &__button {
+        background: #ffffff;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 48px;
+        height: 48px;
+        font-size: 20px;
+        cursor: pointer;
+        border: none;
+        svg {
+            height: 15px;
+            color: #000000;
+        }
+
+        &--left {
+            left: 0;
+            svg {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-70%, -50%);
+            }
+        }
+
+        &--right {
+            right: 0;
+            svg {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-30%, -50%);
+            }
+        }
+    }
+
+    &__slider {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        overflow-x: hidden;
+    }
+
+    &__slide {
+        background-color: #00b495;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 4;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.5s;
+
+        &--2 {
+            background: rgb(200, 26, 121);
+        }
+
+        &--3 {
+            background: rgb(242, 103, 74);
+        }
+    }
+
+    &__dots {
+        position: absolute;
+        bottom: 5%;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+    }
+    &__dot {
+        border: none;
+        background: #ffffff;
+        opacity: 0.7;
+        height: 1rem;
+        width: 1rem;
+        border-radius: 50%;
+        margin-right: 1.75rem;
+        cursor: pointer;
+        transition: all 0.5s;
+        &:last-child {
+            margin: 0;
+        }
+        &--active {
+            background-color: #f79552;
+            opacity: 1;
+        }
+    }
+
+    @media screen and (max-width: 1400px) {
+        &__slider_controls {
+            h1 {
+                font-size: 1.5rem;
+                line-height: 10;
+            }
+        }
+        &__button {
+            width: 30px;
+            height: 30px;
+
+            svg {
+                height: 12px;
+                color: #000000;
+            }
+        }
+    }
+}

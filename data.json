@@ -1,0 +1,14 @@
+{
+    "wines": [
+        {
+            "id": 1,
+            "wine_img": "https://www.wine.com.br/cdn-cgi/image/f=png,h=515,q=99/assets-images/produtos/26563-01.png",
+            "title": "Janela Branca Special Collection Regional Lisboa 2019",
+            "country_img": "https://img.wine.com.br/fenix/image/flags/rounded/portugal.svg",
+            "old_price": "69,90",
+            "partner_price": "39,90",
+            "non_partner_price": "46,94",
+            "discount": "44"
+        }
+    ]
+}

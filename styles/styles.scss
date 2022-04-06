@@ -1,6 +1,17 @@
 @import './variables';
 @import './header';
 @import './wines';
+@import './payment';
+
+@font-face {
+    font-family: 'neoSans';
+    src: url('../fonts/NeoSansStdTR.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'neoSansBold';
+    src: url('../fonts/NeoSans\ Bold.ttf') format('truetype');
+}
 
 * {
     padding: 0;

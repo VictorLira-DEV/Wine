@@ -1,27 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
-@font-face {
-  font-family: 'neoSans';
-  src: url("../fonts/NeoSansStdTR.ttf") format("truetype");
-}
-
 .header {
   height: 350px;
   width: 100%;
   padding: 20px;
   position: relative;
+  font-family: neoSans;
   color: #ffffff;
 }
 
 .header__slider_controls {
   height: 300px;
   position: relative;
-}
-
-.header__slider_controls h1 {
-  font-family: neoSans;
-  text-align: center;
-  line-height: 7.3;
-  font-size: 2.5rem;
 }
 
 .header__button {
@@ -75,6 +64,11 @@
   left: 0;
   z-index: -1;
   overflow-x: hidden;
+}
+
+.header__slider h1 {
+  letter-spacing: 5px;
+  font-size: 3.5rem;
 }
 
 .header__slide {
@@ -140,10 +134,6 @@
 }
 
 @media screen and (max-width: 1400px) {
-  .header__slider_controls h1 {
-    font-size: 1.5rem;
-    line-height: 10;
-  }
   .header__button {
     width: 30px;
     height: 30px;
@@ -343,6 +333,84 @@
   height: 40px;
   border: none;
   border-radius: 4px;
+}
+
+.payment {
+  height: 408px;
+  max-width: 870px;
+  padding: 48px 0 0 0;
+  background: #ffffff;
+  margin: 0 auto;
+}
+
+.payment h1 {
+  font-family: neoSans;
+  text-align: center;
+  font-size: 24px;
+  color: #002b46;
+}
+
+.payment h1 span:first-of-type {
+  font-family: 'neoSansBold';
+}
+
+.payment h1 span:last-of-type {
+  color: #c81a78;
+}
+
+.payment__cards {
+  width: 400px;
+}
+
+.payment__arrow-right {
+  margin-left: -50px;
+}
+
+.payment__credit-cards {
+  height: 100%;
+  padding: 45px 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.payment__credit-cards div:last-of-type {
+  min-height: 200px;
+  width: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 100%;
+  -webkit-box-shadow: 0px 5px 15px 2px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 5px 15px 2px rgba(0, 0, 0, 0.3);
+}
+
+.payment__credit-cards div:last-of-type img {
+  width: 90%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+@font-face {
+  font-family: 'neoSans';
+  src: url("../fonts/NeoSansStdTR.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'neoSansBold';
+  src: url("../fonts/NeoSans Bold.ttf") format("truetype");
 }
 
 * {

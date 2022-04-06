@@ -1,0 +1,94 @@
+.benefits {
+    font-family: 'neoSansBold';
+    text-align: center;
+    padding: 56px 0 90px 0;
+    background: #f5f5f5;
+
+    h1 {
+        color: #111111;
+        margin-bottom: 59px;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__item {
+        position: relative;
+        cursor: pointer;
+        width: 274px;
+        height: 83px;
+        background: $white;
+        border-radius: 4.6px;
+        padding: 20px;
+        list-style: none;
+        box-shadow: 0px 2.29771px 5.74428px rgba(0, 0, 0, 0.05);
+        &:not(:last-child) {
+            margin-right: 25px;
+        }
+    }
+
+    &__white-stick {
+        position: absolute;
+        left: -2px;
+        top: 15px;
+        z-index: 5;
+    }
+
+    &__icon {
+        position: absolute;
+        left: 0;
+        top: 0;
+        border-top-left-radius: 4px;
+
+        &--over {
+            z-index: 3;
+        }
+
+        &--under {
+            z-index: 2;
+        }
+    }
+
+    &__arrow-right {
+        position: absolute;
+        color: #333333;
+        height: 1.2rem;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &__text {
+        margin: 0 auto;
+        width: 180px;
+        margin-right: 10px;
+        display: flex;
+
+        p {
+            margin-left: 20px;
+            font-family: 'Lato', sans-serif;
+            font-size: 13px;
+            color: #555555;
+            height: 40px;
+            line-height: 1.5;
+        }
+    }
+
+    &__main-icon {
+        position: relative;
+        width: 40px;
+        &--money {
+            position: absolute;
+            top: -10px;
+            left: -10px;
+        }
+
+        &--gift {
+            position: absolute;
+            top: -10px;
+            left: -10px;
+        }
+    }
+}

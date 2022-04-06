@@ -1,4 +1,5 @@
 @import './header';
+@import './wines';
 
 * {
     padding: 0;
@@ -13,12 +14,12 @@ html {
 .app {
     max-width: 1920px;
     margin: 0 auto;
+}
 
-    .container {
-        max-width: 1092px;
-        height: 100%;
-        margin: 0 auto;
-    }
+.container {
+    max-width: 1092px;
+    height: 100%;
+    margin: 0 auto;
 }
 
 .hidden {

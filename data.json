@@ -9,6 +9,46 @@
             "partner_price": "39,90",
             "non_partner_price": "46,94",
             "discount": "44"
+        },
+        {
+            "id": 2,
+            "wine_img": "https://www.wine.com.br/cdn-cgi/image/f=png,h=515,q=99/assets-images/produtos/23266-01.png",
+            "title": "Bear Flag Red Blend 2018",
+            "country_img": "https://img.wine.com.br/fenix/image/flags/rounded/estadosunidos.svg",
+            "old_price": "94,90",
+            "partner_price": "49,90",
+            "non_partner_price": "58,71",
+            "discount": "47"
+        },
+        {
+            "id": 3,
+            "wine_img": "https://www.wine.com.br/cdn-cgi/image/f=png,h=515,q=99/assets-images/produtos/27144-01.png",
+            "title": "V9 Gran Reserva Single Vineyard D.O. Valle del Maipo Carménère 2019",
+            "country_img": "https://img.wine.com.br/fenix/image/flags/rounded/chile.svg",
+            "old_price": "169,90",
+            "partner_price": "79,90",
+            "non_partner_price": "94,00",
+            "discount": "53"
+        },
+        {
+            "id": 4,
+            "wine_img": "https://www.wine.com.br/cdn-cgi/image/f=png,h=515,q=99/assets-images/produtos/26904-01.png",
+            "title": "Finca Terra Malbec 2020",
+            "country_img": "https://img.wine.com.br/fenix/image/flags/rounded/argentina.svg",
+            "old_price": "42,90",
+            "partner_price": "32,90",
+            "non_partner_price": "38,71",
+            "discount": "23"
+        },
+        {
+            "id": 5,
+            "wine_img": "https://www.wine.com.br/cdn-cgi/image/f=png,h=515,q=99/assets-images/produtos/26575-01.png",
+            "title": "Apothic Red 2019",
+            "country_img": "https://img.wine.com.br/fenix/image/flags/rounded/estadosunidos.svg",
+            "old_price": "159,90",
+            "partner_price": "109,90",
+            "non_partner_price": "129,29",
+            "discount": "31"
         }
     ]
 }

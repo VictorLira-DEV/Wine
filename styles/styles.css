@@ -26,6 +26,7 @@
 
 .header__button {
   background: #ffffff;
+  border-radius: 4px;
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -224,35 +225,36 @@
   position: relative;
 }
 
-.wines__image svg {
-  position: absolute;
-}
-
 .wines__image--heart {
   right: 10px;
   top: 10px;
+  position: absolute;
 }
 
 .wines__image--red_wine {
+  position: absolute;
   bottom: 35px;
   left: 10px;
 }
 
-.wines__image--country {
-  bottom: 10px;
-  left: 10px;
-}
-
-.wines__image img {
+.wines__image--bottle {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
 }
 
+.wines__image--country {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  width: 16px;
+}
+
 .wines__title {
   font-size: 14px;
   font-weight: 700;
+  min-height: 50px;
 }
 
 .wines__old-price {
@@ -268,9 +270,9 @@
 }
 
 .wines__old-price span:first-of-type::before {
-  content: "";
+  content: '';
   position: absolute;
-  width: 63px;
+  width: 75px;
   height: 1px;
   top: 12px;
   background: #555555;

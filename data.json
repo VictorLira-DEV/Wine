@@ -50,5 +50,31 @@
             "non_partner_price": "129,29",
             "discount": "31"
         }
+    ],
+    "modal": [
+        {
+            "id": "popup-1",
+            "title": "Desconto em compras na Wine",
+            "image": "../images/icon-off.JPG",
+            "text": "Sócio Wine tem 15% de desconto em todas as compras no site e no app. Sócios que assinam mais de uma experiência passam a ter 20%. O desconto será aplicado diretamente no carrinho em todas as compras."
+        },
+        {
+            "id": "popup-2",
+            "title": "3x mais cashback pelo WineUP",
+            "image": "../images/money-bag.JPG",
+            "text": "Sócio Wine ganha 3x mais cashback no programa de recompensas da Wine, o WineUP. A cada compra no site ou APP, você acumula cashback."
+        },
+        {
+            "id": "popup-3",
+            "title": "Taxa de entrega diferenciada",
+            "image": "../images/icon-truck.JPG",
+            "text": "Frete gratuito para regiões Sul e Sudeste. Para as demais regiões, a taxa de entrega é diferenciada. Você pode conferir o valor durante o processo de compra após a conclusão de sua assinatura."
+        },
+        {
+            "id": "popup-4",
+            "title": "Brindes e cupons no Indique Amigos",
+            "image": "../images/icon-gift.JPG",
+            "text": "Ao assinar o Clube Wine com seu código, seu amigo e você ganham brinde e cupom de até R$ 100 para usar no site ou APP."
+        }
     ]
 }

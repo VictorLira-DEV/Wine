@@ -149,7 +149,7 @@
   min-height: 588px;
   background: #f5f5f5;
   text-align: center;
-  padding: 60px 40px;
+  padding: 60px 0px;
 }
 
 .wines__menu {
@@ -336,6 +336,12 @@
   border-radius: 4px;
 }
 
+@media screen and (max-width: 1238px) {
+  .wines__wrapper {
+    overflow-x: scroll;
+  }
+}
+
 .payment {
   height: 408px;
   max-width: 870px;
@@ -365,6 +371,10 @@
 
 .payment__arrow-right {
   margin-left: -50px;
+}
+
+.payment__arrow-down {
+  display: none;
 }
 
 .payment__credit-cards {
@@ -402,6 +412,31 @@
   width: 90%;
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+@media screen and (max-width: 860px) {
+  .payment__credit-cards {
+    padding: 45px 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .payment {
+    height: auto;
+  }
+  .payment__credit-cards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .payment__arrow-right {
+    display: none;
+  }
+  .payment__arrow-down {
+    display: block;
+    margin: 40px 0;
+  }
 }
 
 .benefits {
@@ -513,6 +548,25 @@
   max-width: 20px;
 }
 
+@media screen and (max-width: 1200px) {
+  .benefits__list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .benefits__item {
+    margin: 25px 25px 0 0;
+  }
+}
+
+@media screen and (max-width: 504px) {
+  .benefits__item {
+    margin: 25px 0px 0 0;
+  }
+  .benefits__item:not(:last-child) {
+    margin-right: 0;
+  }
+}
+
 .overlay {
   background-color: rgba(0, 0, 0, 0.3);
   position: fixed;
@@ -617,7 +671,7 @@
 }
 
 .more-about__cards-list > :not(:last-child) {
-  margin-right: 10%;
+  margin-right: 100px;
 }
 
 .more-about__card {
@@ -690,6 +744,19 @@
 .more-about__card p span {
   color: #474747;
   font-weight: 700;
+}
+
+@media screen and (max-width: 1024px) {
+  .more-about__cards-list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .more-about__cards-list > :not(:last-child) {
+    margin-right: 20px;
+  }
+  .more-about__card {
+    margin-top: 30px;
+  }
 }
 
 .podcast {
@@ -781,6 +848,10 @@
   position: relative;
 }
 
+.podcast__banner img {
+  max-width: 100%;
+}
+
 .podcast__text {
   position: absolute;
   font-family: 'neoSans';
@@ -814,49 +885,26 @@
   width: 150px;
 }
 
-.podcast__text > div:first-of-type h1 {
-  margin: 10px 0 34px 0;
-}
-
 .podcast__text > div:first-of-type .podcast__main-logo {
-  width: 115.58px;
-  height: 115.58px;
-  position: relative;
+  width: 200px;
+  position: absolute;
   margin: 0 auto;
+  right: 50%;
+  top: 40%;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
   z-index: 1;
 }
 
-.podcast__text > div:first-of-type .podcast__main-logo--circle {
+.podcast__text > div:first-of-type .podcast__main-logo img {
   width: 100%;
-}
-
-.podcast__text > div:first-of-type .podcast__main-logo--stick-1 {
-  position: absolute;
-  right: 22px;
-  top: 25px;
-  width: 67;
-  z-index: 4;
-}
-
-.podcast__text > div:first-of-type .podcast__main-logo--stick-2 {
-  position: absolute;
-  left: 29px;
-  top: 32px;
-  z-index: 2;
-}
-
-.podcast__text > div:first-of-type .podcast__main-logo--stick-3 {
-  width: 60px;
-  position: absolute;
-  left: 33px;
-  top: 50px;
-  z-index: 3;
 }
 
 .podcast__text p:first-of-type {
   font-size: 20.47px;
   -ms-flex-item-align: start;
       align-self: flex-start;
+  margin-top: 20px;
 }
 
 .podcast__text p:last-of-type {
@@ -868,11 +916,123 @@
   font-weight: 700;
 }
 
+.podcast__mobile-text {
+  display: none;
+}
+
 .podcast__blocks {
   position: absolute;
   width: 170px;
   left: 0;
   bottom: 3px;
+}
+
+@media screen and (max-width: 1024px) {
+  .podcast {
+    height: auto;
+  }
+  .podcast__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .podcast__social-media {
+    margin: 0 0 50px 0;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .podcast__text {
+    padding: 30px 30px;
+  }
+  .podcast > div:first-of-type .podcast__microphone-icon {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+  }
+  .podcast > div:first-of-type .podcast__microphone-icon img {
+    width: 90px;
+  }
+  .podcast > div:first-of-type .podcast__main-logo {
+    width: 100px;
+  }
+  .podcast__desktop-text {
+    display: none;
+  }
+  .podcast__mobile-text {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .podcast {
+    padding: 60px;
+  }
+  .podcast__text h1 {
+    font-size: 12.62px;
+  }
+  .podcast__text p:first-of-type {
+    font-size: 10.75px;
+    margin-top: 5px;
+  }
+  .podcast__text p:last-of-type {
+    font-size: 13.14px;
+    margin-top: 10px;
+  }
+  .podcast__social-media {
+    width: auto;
+    text-align: center;
+  }
+  .podcast__social-media h1 {
+    font-size: 3rem;
+    text-align: center;
+  }
+  .podcast__social-media ul li {
+    width: 130px;
+    height: 40px;
+  }
+  .podcast__blocks {
+    position: absolute;
+    width: 100px;
+    left: 0;
+    bottom: 5px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .podcast__text > div:first-of-type .podcast__microphone-icon {
+    top: 10px;
+    left: 10px;
+  }
+  .podcast__text > div:first-of-type .podcast__microphone-icon img {
+    width: 60px;
+  }
+  .podcast__text > div:first-of-type .podcast__main-logo {
+    top: 30%;
+    width: 70px;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .podcast {
+    padding: 60px 30px;
+  }
+  .podcast__text {
+    padding: 30px 4px 30px 20px;
+  }
+  .podcast__text > div:first-of-type p:first-of-type {
+    margin-top: 10px;
+  }
+  .podcast__text > div:first-of-type p:last-of-type {
+    margin-top: 0px;
+  }
 }
 
 @font-face {
@@ -902,9 +1062,10 @@ html {
 }
 
 .container {
-  max-width: 1190px;
+  max-width: 1220px;
   height: 100%;
   margin: 0 auto;
+  padding: 0 30px;
 }
 
 .hidden {

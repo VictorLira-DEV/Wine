@@ -4,14 +4,19 @@
     padding: 48px 0 0 0;
     background: $white;
     margin: 0 auto;
+
+    
+
     h1 {
         font-family: neoSans;
         text-align: center;
         font-size: 24px;
         color: #002b46;
+
         span:first-of-type {
             font-family: 'neoSansBold';
         }
+
         span:last-of-type {
             color: #c81a78;
         }
@@ -25,12 +30,17 @@
         margin-left: -50px;
     }
 
+    &__arrow-down {
+        display: none;
+    }
+
     &__credit-cards {
         height: 100%;
         padding: 45px 100px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+
         div:last-of-type {
             min-height: 200px;
             width: 200px;
@@ -39,10 +49,34 @@
             justify-content: center;
             border-radius: 100%;
             box-shadow: 0px 5px 15px 2px rgba(0, 0, 0, 0.3);
+
             img {
                 width: 90%;
                 object-fit: contain;
             }
+        }
+    }
+
+    @media screen and (max-width: 860px) {
+        &__credit-cards {
+            padding: 45px 30px;
+        }
+    }
+
+    @media screen and (max-width: $tablet) {
+        height: auto;
+
+        &__credit-cards {
+            flex-direction: column;
+        }
+
+        &__arrow-right {
+            display: none;
+        }
+
+        &__arrow-down{
+            display: block;
+            margin: 40px 0;
         }
     }
 }

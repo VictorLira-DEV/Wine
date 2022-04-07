@@ -3,6 +3,7 @@
     height: 667px;
     color: $white;
     padding: 90px 0;
+
     &__wrapper {
         display: flex;
         justify-content: center;
@@ -70,6 +71,12 @@
         position: relative;
     }
 
+    &__banner {
+        img {
+            max-width: 100%;
+        }
+    }
+
     &__text {
         position: absolute;
         font-family: 'neoSans';
@@ -93,39 +100,16 @@
                 }
             }
 
-            h1 {
-                margin: 10px 0 34px 0;
-            }
-
             .podcast__main-logo {
-                width: 115.58px;
-                height: 115.58px;
-                position: relative;
+                width: 200px;
+                position: absolute;
                 margin: 0 auto;
+                right: 50%;
+                top: 40%;
+                transform: translate(50%, -50%);
                 z-index: 1;
-                &--circle {
+                img {
                     width: 100%;
-                }
-
-                &--stick-1 {
-                    position: absolute;
-                    right: 22px;
-                    top: 25px;
-                    width: 67;
-                    z-index: 4;
-                }
-                &--stick-2 {
-                    position: absolute;
-                    left: 29px;
-                    top: 32px;
-                    z-index: 2;
-                }
-                &--stick-3 {
-                    width: 60px;
-                    position: absolute;
-                    left: 33px;
-                    top: 50px;
-                    z-index: 3;
                 }
             }
         }
@@ -133,6 +117,7 @@
         p:first-of-type {
             font-size: 20.47px;
             align-self: flex-start;
+            margin-top: 20px;
         }
 
         p:last-of-type {
@@ -144,10 +129,133 @@
         }
     }
 
+    &__mobile-text {
+        display: none;
+    }
+
     &__blocks {
         position: absolute;
         width: 170px;
         left: 0;
         bottom: 3px;
+    }
+
+    @media screen and (max-width: $laptop) {
+        height: auto;
+        &__wrapper {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &__social-media {
+            margin: 0 0 50px 0;
+        }
+    }
+
+    @media screen and (max-width: 510px) {
+        &__text {
+            padding: 30px 30px;
+        }
+
+        > div:first-of-type {
+            .podcast__microphone-icon {
+                position: absolute;
+                top: 20px;
+                left: 30px;
+                img {
+                    width: 90px;
+                }
+            }
+
+            .podcast__main-logo {
+                width: 100px;
+            }
+        }
+
+        &__desktop-text {
+            display: none;
+        }
+        &__mobile-text {
+            display: block;
+        }
+    }
+
+    @media screen and (max-width: $mobile) {
+        padding: 60px;
+
+        &__text {
+            h1 {
+                font-size: 12.62px;
+            }
+
+            p:first-of-type {
+                font-size: 10.75px;
+                margin-top: 5px;
+            }
+
+            p:last-of-type {
+                font-size: 13.14px;
+                margin-top: 10px;
+            }
+        }
+
+        &__social-media {
+            width: auto;
+            text-align: center;
+            h1 {
+                font-size: 3rem;
+                text-align: center;
+            }
+
+            ul {
+                li {
+                    width: 130px;
+                    height: 40px;
+                }
+            }
+        }
+
+        &__blocks {
+            position: absolute;
+            width: 100px;
+            left: 0;
+            bottom: 5px;
+        }
+    }
+
+    @media screen and (max-width: 400px) {
+        &__text {
+            > div:first-of-type {
+                .podcast__microphone-icon {
+                    top: 10px;
+                    left: 10px;
+                    img {
+                        width: 60px;
+                    }
+                }
+
+                .podcast__main-logo {
+                    top: 30%;
+                    width: 70px;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 370px) {
+        padding: 60px 30px;
+        &__text {
+            padding: 30px 4px 30px 20px;
+            > div:first-of-type {
+                p:first-of-type {
+                    margin-top: 10px;
+                }
+
+                p:last-of-type {
+                    margin-top: 0px;
+                }
+            }
+        }
     }
 }

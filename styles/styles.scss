@@ -6,6 +6,7 @@
 @import './payment';
 @import './benefits';
 @import './modal';
+@import './more-about';
 
 @font-face {
     font-family: 'neoSans';
@@ -13,8 +14,8 @@
 }
 
 @font-face {
-    font-family: 'neoSansBold';
     src: url('../fonts/NeoSans\ Bold.ttf') format('truetype');
+    font-family: 'neoSansBold';
 }
 
 * {

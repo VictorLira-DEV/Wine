@@ -3,7 +3,7 @@
 .header {
   height: 350px;
   width: 100%;
-  padding: 20px;
+  padding: 30px;
   position: relative;
   font-family: neoSans;
   color: #ffffff;
@@ -107,15 +107,12 @@
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
 }
 
 .header__dot {
   border: none;
-  background: #ffffff;
-  opacity: 0.7;
+  background: white;
   height: 1rem;
   width: 1rem;
   border-radius: 50%;
@@ -145,11 +142,26 @@
   }
 }
 
+@media screen and (max-width: 480px) {
+  .header__button {
+    display: none;
+  }
+  .header__dots {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .header__slider h1 {
+    letter-spacing: 5px;
+    font-size: 40px;
+  }
+}
+
 .wines {
   min-height: 588px;
   background: #f5f5f5;
   text-align: center;
-  padding: 60px 0px;
+  padding: 60px 0px 60px 30px;
 }
 
 .wines__menu {
@@ -345,7 +357,7 @@
 .payment {
   height: 408px;
   max-width: 870px;
-  padding: 48px 0 0 0;
+  padding: 48px 30px 48px 30px;
   background: #ffffff;
   margin: 0 auto;
 }
@@ -439,10 +451,20 @@
   }
 }
 
+@media screen and (max-width: 480px) {
+  .payment h1 {
+    font-size: 15px;
+    line-height: 23px;
+  }
+  .payment__cards {
+    width: 300px;
+  }
+}
+
 .benefits {
   font-family: 'neoSansBold';
   text-align: center;
-  padding: 56px 0 90px 0;
+  padding: 56px 30px 90px 30px;
   background: #f5f5f5;
 }
 
@@ -560,10 +582,10 @@
 
 @media screen and (max-width: 504px) {
   .benefits__item {
-    margin: 25px 0px 0 0;
+    margin-right: 0px;
   }
   .benefits__item:not(:last-child) {
-    margin-right: 0;
+    margin-right: 0px;
   }
 }
 
@@ -622,7 +644,6 @@
 .modal__icon-wrapper {
   width: 112px;
   height: 112px;
-  background: #fcddd7;
   border-radius: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -647,7 +668,7 @@
 }
 
 .more-about {
-  padding: 54px 0 94px 0;
+  padding: 54px 30px 94px 30px;
   background: #f5f5f5;
   text-align: center;
 }
@@ -763,7 +784,7 @@
   background: #3c214b;
   height: 667px;
   color: #ffffff;
-  padding: 90px 0;
+  padding: 90px 30px;
 }
 
 .podcast__wrapper {
@@ -1016,11 +1037,11 @@
   }
   .podcast__text > div:first-of-type .podcast__main-logo {
     top: 30%;
-    width: 70px;
+    width: 90px;
   }
 }
 
-@media screen and (max-width: 370px) {
+@media screen and (max-width: 330px) {
   .podcast {
     padding: 60px 30px;
   }
@@ -1065,7 +1086,6 @@ html {
   max-width: 1220px;
   height: 100%;
   margin: 0 auto;
-  padding: 0 30px;
 }
 
 .hidden {

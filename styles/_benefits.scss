@@ -1,7 +1,7 @@
 .benefits {
     font-family: 'neoSansBold';
     text-align: center;
-    padding: 56px 0 90px 0;
+    padding: 56px 30px 90px 30px;
     background: #f5f5f5;
 
     h1 {
@@ -101,16 +101,16 @@
             flex-wrap: wrap;
         }
         &__item {
-           margin: 25px 25px 0 0 ;
+            margin: 25px 25px 0 0;
         }
     }
 
     @media screen and (max-width: 504px) {
         &__item {
-            margin: 25px 0px 0 0 ;
+            margin-right: 0px;
             &:not(:last-child) {
-                margin-right: 0;
+                margin-right: 0px;
             }
-         }
+        }
     }
 }

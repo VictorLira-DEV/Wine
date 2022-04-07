@@ -23,6 +23,22 @@ const closeModal = function () {
     overlay.classList.add('hidden');
 };
 
+const getIconBackgroundColor = function (icon) {
+    switch (icon) {
+        case 'popup-1':
+            return '#FCDDD7';
+        case 'popup-2':
+            return '#F5D6DC';
+        case 'popup-3':
+            return '#D5E9E2';
+        case 'popup-4':
+            return '#FDE8D9';
+        default: {
+            return 'pink';
+        }
+    }
+};
+
 //using event delegation to get the id
 benefitsCardsParent.addEventListener('click', e => {
     overlay.classList.remove('hidden');
@@ -33,9 +49,11 @@ benefitsCardsParent.addEventListener('click', e => {
             if (item.id !== currentPopupId) return '';
             return `
             <div class="modal">
-                <img class="modal__close" src="./svg/btn-close.svg" alt="close icon">
+                <img class="modal__close" src="./svg/btn-close.svg" alt="close icon"">
                 <h1>${item.title}</h1>
-                <div class="modal__icon-wrapper">
+                <div class="modal__icon-wrapper" style='background: ${getIconBackgroundColor(
+                    currentPopupId
+                )}' >
                     <img src="${item.image}" alt="current icon">
                 </div>
                 <p>${item.text}</p>

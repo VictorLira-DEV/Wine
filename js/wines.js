@@ -2,12 +2,12 @@ const fetchWinesData = async function () {
     try {
         const response = await fetch('../data.json');
         if (!response.ok) {
-            throw new Error('Someting went wrong');
+            throw new Error('Something went wrong');
         }
         const data = await response.json();
         return data;
     } catch (error) {
-        console.log(error);
+        // console.log(error);
     }
 };
 

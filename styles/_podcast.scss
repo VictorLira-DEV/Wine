@@ -2,7 +2,7 @@
     background: #3c214b;
     height: 667px;
     color: $white;
-    padding: 90px 0;
+    padding: 90px 30px;
 
     &__wrapper {
         display: flex;
@@ -237,13 +237,13 @@
 
                 .podcast__main-logo {
                     top: 30%;
-                    width: 70px;
+                    width: 90px;
                 }
             }
         }
     }
 
-    @media screen and (max-width: 370px) {
+    @media screen and (max-width: 330px) {
         padding: 60px 30px;
         &__text {
             padding: 30px 4px 30px 20px;

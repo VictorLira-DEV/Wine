@@ -76,5 +76,27 @@
             "image": "../images/icon-gift.png",
             "text": "Ao assinar o Clube Wine com seu código, seu amigo e você ganham brinde e cupom de até R$ 100 para usar no site ou APP."
         }
+    ],
+    "slides": [
+        {
+            "id": "slider-1",
+            "image": "../svg/about-1.svg",
+            "text": "Escolha a WineBox que mais combina com seu paladar."
+        },
+        {
+            "id": "slider-2",
+            "image": "../images/cupom.JPG",
+            "text": "Digite os 6 primeiros dígitos de seu cartão Porto Seguro no campo 'Possui cupom ou código de indicação'"
+        },
+        {
+            "id": "slider-1",
+            "image": "../images/about-3.png",
+            "text": "Selecione o plano de pagamento mensal."
+        },
+        {
+            "id": "slider-2",
+            "image": "../images/about-4.png",
+            "text": "Pronto! É só concluir sua assinatura, inserindo seus dados completos."
+        }
     ]
 }

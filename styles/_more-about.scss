@@ -1,12 +1,12 @@
 .more-about {
-    padding: 54px 30px 94px 30px;
+    padding: 54px 0px 94px 0px;
     background: #f5f5f5;
     text-align: center;
     h1 {
         font-family: 'neoSansBold';
     }
 
-    &__cards-list {
+    &__cards-desktop-list {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -15,6 +15,9 @@
         > :not(:last-child) {
             margin-right: 100px;
         }
+    }
+    &__cards-mobile-list {
+        display: none;
     }
 
     &__card {
@@ -82,15 +85,14 @@
     }
 
     @media screen and (max-width: $laptop) {
-        &__cards-list {
+        &__cards-desktop-list {
             flex-wrap: wrap;
             > :not(:last-child) {
                 margin-right: 20px;
             }
         }
 
-        
-        &__card{
+        &__card {
             margin-top: 30px;
         }
     }

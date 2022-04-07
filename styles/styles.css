@@ -668,7 +668,7 @@
 }
 
 .more-about {
-  padding: 54px 30px 94px 30px;
+  padding: 54px 0px 94px 0px;
   background: #f5f5f5;
   text-align: center;
 }
@@ -677,7 +677,7 @@
   font-family: 'neoSansBold';
 }
 
-.more-about__cards-list {
+.more-about__cards-desktop-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -691,8 +691,12 @@
   padding-top: 50px;
 }
 
-.more-about__cards-list > :not(:last-child) {
+.more-about__cards-desktop-list > :not(:last-child) {
   margin-right: 100px;
+}
+
+.more-about__cards-mobile-list {
+  display: none;
 }
 
 .more-about__card {
@@ -768,11 +772,11 @@
 }
 
 @media screen and (max-width: 1024px) {
-  .more-about__cards-list {
+  .more-about__cards-desktop-list {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  .more-about__cards-list > :not(:last-child) {
+  .more-about__cards-desktop-list > :not(:last-child) {
     margin-right: 20px;
   }
   .more-about__card {

@@ -39,7 +39,7 @@ benefitsCardsParent.addEventListener('click', e => {
         .map(item => {
             if (item.id !== currentPopupId) return '';
             return `
-            <div class="modal">
+            <div class="modal" id="${item.id}">
                 <img class="modal__close" src="./svg/btn-close.svg" alt="close icon"">
                 <h1>${item.title}</h1>
                 <div class="modal__icon-wrapper" style='background: ${getIconBackgroundColor(

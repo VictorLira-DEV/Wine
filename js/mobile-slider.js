@@ -1,4 +1,5 @@
 import fetchData from './helper-functions.js';
+import { SLIDER_INITAL_POSITION } from './config.js';
 
 const dotContainer = document.querySelector('.more-about__dots');
 
@@ -20,7 +21,7 @@ const createDots = async function () {
             `<button class="more-about__dot" data-slide="${i}"></button>`
         );
     });
-    activeDots(0);
+    activeDots(SLIDER_INITAL_POSITION);
 };
 
 const goToSlide = async function (position) {
@@ -38,13 +39,8 @@ dotContainer.addEventListener('click', function (e) {
     }
 });
 
-export const callMobileSlider = function () {
-    goToSlide(0);
-    createDots();
-};
-
 //CARDS DESKTOP
-const generateSlideMarkup = async function () {
+export const generateSlideMarkup = async function () {
     const sliderContainer = document.querySelector(
         '.more-about__cards-desktop-list'
     );
@@ -52,19 +48,23 @@ const generateSlideMarkup = async function () {
     const markup = slides
         .map((item, index) => {
             return `
-        <div class="more-about__card">
-            <div class="more-about__card--${index + 1}">
-                <img src="${item.image}" alt="" />
-            </div>
-            <p>
-                ${item.text}
-            </p>
-        </div>
-        `;
+            <div class="more-about__card">
+                <div class="more-about__card--${index + 1}">
+                    <img src="${item.image}" alt="" />
+                </div>
+                <p>
+                    ${item.text}
+                </p>
+                </div>
+            `;
         })
         .join(' ');
 
     sliderContainer.insertAdjacentHTML('afterbegin', markup);
 };
 
-generateSlideMarkup();
+export const callMobileSlider = function () {
+    generateSlideMarkup()
+    goToSlide(SLIDER_INITAL_POSITION);
+    createDots();
+};

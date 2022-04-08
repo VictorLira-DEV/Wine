@@ -194,7 +194,7 @@
 }
 
 .wines__wrapper {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato";
   width: 100%;
   height: 100%;
   display: -webkit-box;
@@ -256,6 +256,7 @@
   font-size: 14px;
   font-weight: 700;
   min-height: 50px;
+  margin-top: 10px;
 }
 
 .wines__old-price {
@@ -471,6 +472,10 @@
   margin-bottom: 59px;
 }
 
+.benefits h1 span {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .benefits__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -666,7 +671,7 @@
 }
 
 .more-about {
-  padding: 54px 0px 94px 0px;
+  padding: 54px 30px 94px 30px;
   background: #f5f5f5;
   text-align: center;
 }
@@ -769,6 +774,12 @@
   display: none;
 }
 
+@media screen and (max-width: 1131px) {
+  .more-about__cards-desktop-list > :not(:last-child) {
+    margin-right: 50px;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .more-about__cards-desktop-list {
     -ms-flex-wrap: wrap;
@@ -831,7 +842,7 @@
     margin-top: 20px;
   }
   .more-about__text {
-    color: #7A7A7A;
+    color: #7a7a7a;
   }
   .more-about__card--4 {
     width: 300px;
@@ -870,7 +881,7 @@
   .more-about__dot {
     z-index: 33;
     border: none;
-    background: #D2D2D2;
+    background: #d2d2d2;
     height: 1rem;
     width: 1rem;
     border-radius: 50%;
@@ -883,7 +894,7 @@
     margin: 0;
   }
   .more-about__dot--active {
-    background-color: #B6116E;
+    background-color: #b6116e;
     opacity: 1;
   }
 }

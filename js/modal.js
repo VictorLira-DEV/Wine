@@ -14,8 +14,8 @@ const closeModal = function () {
     overlay.classList.add('hidden');
 };
 
-const getIconBackgroundColor = function (icon) {
-    switch (icon) {
+const getIconBackgroundColor = function (currentIcon) {
+    switch (currentIcon) {
         case 'popup-1':
             return '#FCDDD7';
         case 'popup-2':
@@ -30,7 +30,7 @@ const getIconBackgroundColor = function (icon) {
     }
 };
 
-//using event delegation to get the id
+//using event delegation to get the current id
 benefitsCardsParent.addEventListener('click', e => {
     overlay.classList.remove('hidden');
     const currentPopupId = e.target.closest('.benefits__item')?.id;

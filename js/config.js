@@ -1,0 +1,1 @@
+export const SLIDER_INITAL_POSITION = 0;

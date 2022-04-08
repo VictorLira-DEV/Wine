@@ -89,12 +89,12 @@
             "text": "Digite os 6 primeiros dígitos de seu cartão Porto Seguro no campo 'Possui cupom ou código de indicação'"
         },
         {
-            "id": "slider-1",
+            "id": "slider-3",
             "image": "../images/about-3.png",
             "text": "Selecione o plano de pagamento mensal."
         },
         {
-            "id": "slider-2",
+            "id": "slider-4",
             "image": "../images/about-4.png",
             "text": "Pronto! É só concluir sua assinatura, inserindo seus dados completos."
         }

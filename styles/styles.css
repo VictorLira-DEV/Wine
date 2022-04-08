@@ -1,37 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300;1,400;1,500;1,600&display=swap");
-.slider-dots {
-  position: absolute;
-  bottom: 5%;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  display: none;
-  border: 1px solid red;
-}
-
-.slider-dots .slider-dot {
-  border: none;
-  background: white;
-  height: 10rem;
-  width: 10rem;
-  border-radius: 50%;
-  margin-right: 1.75rem;
-  cursor: pointer;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-  right: 30px;
-}
-
-.slider-dots .slider-dot:last-child {
-  margin: 0;
-}
-
-.slider-dots .slider-dot--active {
-  background-color: #f79552;
-  opacity: 1;
-}
-
 .header {
   height: 350px;
   width: 100%;
@@ -105,7 +73,6 @@
 }
 
 .header__slide {
-  background-color: #00b495;
   position: absolute;
   top: 0;
   right: 0;
@@ -125,12 +92,18 @@
   transition: 0.5s;
 }
 
+.header__slide--1 {
+  background-color: #00b495;
+}
+
 .header__slide--2 {
   background: #c81a79;
+  z-index: 3;
 }
 
 .header__slide--3 {
   background: #f2674a;
+  z-index: 1;
 }
 
 .header__dots {
@@ -197,7 +170,7 @@
 }
 
 .wines__menu {
-  font: 700  16px Lato, sans-serif;
+  font: 700 16px Lato, sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -616,6 +589,9 @@
 }
 
 @media screen and (max-width: 504px) {
+  .benefits h1 {
+    margin-bottom: 30px;
+  }
   .benefits__item {
     margin-right: 0px;
   }
@@ -826,6 +802,9 @@
 }
 
 @media screen and (max-width: 480px) {
+  .more-about {
+    padding: 30px 30px 94px;
+  }
   .more-about h1 {
     font-size: 15px;
     width: 200px;
@@ -911,7 +890,7 @@
             justify-content: center;
   }
   .more-about__dot {
-    z-index: 33;
+    z-index: 3;
     border: none;
     background: #d2d2d2;
     height: 1rem;

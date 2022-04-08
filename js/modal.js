@@ -1,6 +1,7 @@
+import fetchData from './helper-functions.js';
+
 const benefitsCardsParent = document.querySelector('.benefits__list');
 const overlay = document.querySelector('.overlay');
-import fetchData from './helper-functions.js';
 
 let modalData;
 const getModalData = async function () {
@@ -32,8 +33,10 @@ const getIconBackgroundColor = function (currentIcon) {
 
 //using event delegation to get the current id
 benefitsCardsParent.addEventListener('click', e => {
-    overlay.classList.remove('hidden');
     const currentPopupId = e.target.closest('.benefits__item')?.id;
+    if (!currentPopupId) return;
+
+    overlay.classList.remove('hidden');
 
     const markup = modalData
         .map(item => {
@@ -53,6 +56,7 @@ benefitsCardsParent.addEventListener('click', e => {
         .join(' ');
 
     overlay.insertAdjacentHTML('afterbegin', markup);
+    overlay.addEventListener('click', () => closeModal());
     document
         .querySelector('.modal__close')
         .addEventListener('click', () => closeModal());

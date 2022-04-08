@@ -32,7 +32,28 @@ const goToSlide = function (position) {
     });
 };
 
+//slider timer
+let timer;
+const setTimer = function () {
+    return setInterval(() => {
+        let counter = 0;
+        counter++;
+        if (counter > 1) return;
+
+        if (currentSlide === maxSlide - 1) {
+            currentSlide = 0;
+        } else {
+            currentSlide++;
+        }
+        goToSlide(currentSlide);
+        activeDots(currentSlide);
+    }, 3000);
+};
+
+timer = setTimer();
+
 const nextSlide = function () {
+    clearInterval(timer);
     if (currentSlide === maxSlide - 1) {
         currentSlide = 0;
     } else {
@@ -40,9 +61,11 @@ const nextSlide = function () {
     }
     goToSlide(currentSlide);
     activeDots(currentSlide);
+    timer = setTimer();
 };
 
 const prevSlide = function () {
+    clearInterval(timer);
     if (currentSlide === 0) {
         currentSlide = maxSlide - 1;
     } else {
@@ -50,6 +73,7 @@ const prevSlide = function () {
     }
     goToSlide(currentSlide);
     activeDots(currentSlide);
+    timer = setTimer();
 };
 
 btnRight.addEventListener('click', nextSlide);

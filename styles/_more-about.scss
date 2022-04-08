@@ -105,6 +105,7 @@
         }
     }
     @media screen and (max-width: $mobile) {
+        padding: 30px 30px 94px;
         h1 {
             font-size: 15px;
             width: 200px;
@@ -181,7 +182,7 @@
             justify-content: center;
         }
         &__dot {
-            z-index: 33;
+            z-index: 3;
             border: none;
             background: #d2d2d2;
             height: 1rem;

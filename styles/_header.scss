@@ -63,7 +63,6 @@
     }
 
     &__slide {
-        background-color: #00b495;
         position: absolute;
         top: 0;
         right: 0;
@@ -75,12 +74,18 @@
         justify-content: center;
         transition: 0.5s;
 
+        &--1 {
+            background-color: #00b495;
+        }
+
         &--2 {
             background: rgb(200, 26, 121);
+            z-index: 3;
         }
 
         &--3 {
             background: rgb(242, 103, 74);
+            z-index: 1;
         }
     }
 

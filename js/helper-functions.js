@@ -5,8 +5,8 @@ const fetchData = async function (endPoint) {
             throw new Error('Something went wrong');
         }
         const data = await response.json();
-
         return data;
+        
     } catch (error) {
         console.log(err);
     }

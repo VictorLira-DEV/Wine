@@ -4,7 +4,7 @@
     padding: 48px 30px 48px 30px;
     background: $white;
     margin: 0 auto;
-    
+
     h1 {
         font-family: $neoSans;
         font-size: 24px;
@@ -72,13 +72,13 @@
             display: none;
         }
 
-        &__arrow-down{
+        &__arrow-down {
             display: block;
             margin: 40px 0;
         }
     }
 
-    @media screen and (max-width: $mobile){
+    @media screen and (max-width: $mobile) {
         h1 {
             font-size: 15px;
             line-height: 23px;

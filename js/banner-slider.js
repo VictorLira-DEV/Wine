@@ -1,4 +1,4 @@
-const slider = function () {
+const callBannerSlider = function () {
     const slides = document.querySelectorAll('.header__slide');
     const btnLeft = document.querySelector('.header__button--left');
     const btnRight = document.querySelector('.header__button--right');
@@ -69,4 +69,4 @@ const slider = function () {
     });
 };
 
-export default slider;
+export default callBannerSlider;

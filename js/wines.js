@@ -1,19 +1,8 @@
-const fetchWinesData = async function () {
-    try {
-        const response = await fetch('../data.json');
-        if (!response.ok) {
-            throw new Error('Something went wrong');
-        }
-        const data = await response.json();
-        return data;
-    } catch (error) {
-        // console.log(error);
-    }
-};
+import fetchData from './helper-functions.js';
 
-export const generateWineMarkup = async function () {
+const generateWineMarkup = async function () {
     const winesContainer = document.querySelector('.wines__wrapper');
-    const { wines } = await fetchWinesData();
+    const { wines } = await fetchData('../data.json');
     const markup = wines
         .map(item => {
             return `
@@ -111,3 +100,5 @@ export const generateWineMarkup = async function () {
 
     winesContainer.insertAdjacentHTML('afterbegin', markup);
 };
+
+export default generateWineMarkup;

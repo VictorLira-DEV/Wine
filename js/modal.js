@@ -1,21 +1,12 @@
 const benefitsCardsParent = document.querySelector('.benefits__list');
 const overlay = document.querySelector('.overlay');
+import fetchData from './helper-functions.js';
 
 let modalData;
 const getModalData = async function () {
-    try {
-        const response = await fetch('../data.json');
-        if (!response.ok) {
-            throw new Error('Something went wrong');
-        }
-        const data = await response.json();
-        const { modal } = data;
-        modalData = [...modal];
-    } catch (error) {
-        console.log('Something went wrong');
-    }
+    const { modal } = await fetchData('../data.json');
+    modalData = modal;
 };
-getModalData();
 
 const closeModal = function () {
     const modal = document.querySelector('.modal');
@@ -66,3 +57,9 @@ benefitsCardsParent.addEventListener('click', e => {
         .querySelector('.modal__close')
         .addEventListener('click', () => closeModal());
 });
+
+const callModal = function () {
+    getModalData();
+};
+
+export default callModal;

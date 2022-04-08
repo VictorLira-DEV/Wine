@@ -15,8 +15,7 @@ const activeDots = function (slide) {
     });
 };
 
-const createDots = async function () {
-    const { slides } = await fetchData('../data.json');
+const createDots = function (slides) {
     slides.forEach((_, i) => {
         dotContainer.insertAdjacentHTML(
             'beforeend',
@@ -26,7 +25,7 @@ const createDots = async function () {
     activeDots(SLIDER_INITAL_POSITION);
 };
 
-const goToSlide = async function (position) {
+const goToSlide = function (position) {
     const slides = document.querySelectorAll('.slide');
     slides.forEach((slide, index) => {
         slide.style.transform = `translateX(${100 * (index - position)}%)`;
@@ -73,11 +72,11 @@ export const generateSlideMarkup = async function () {
         .join(' ');
 
     sliderContainer.insertAdjacentHTML('afterbegin', markup);
+    createDots(slides);
 };
 
 export const callMobileSlider = function () {
     generateSlideMarkup();
     goToSlide(SLIDER_INITAL_POSITION);
-    createDots();
     timer = setTimer();
 };

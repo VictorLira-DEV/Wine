@@ -695,10 +695,6 @@
   margin-right: 100px;
 }
 
-.more-about__cards-mobile-list {
-  display: none;
-}
-
 .more-about__card {
   width: 220px;
   height: 278px;
@@ -771,6 +767,10 @@
   font-weight: 700;
 }
 
+.more-about__slider {
+  display: none;
+}
+
 @media screen and (max-width: 1024px) {
   .more-about__cards-desktop-list {
     -ms-flex-wrap: wrap;
@@ -781,6 +781,165 @@
   }
   .more-about__card {
     margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .more-about__cards-desktop-list {
+    display: none;
+  }
+  .more-about__slider {
+    height: 400px;
+    position: relative;
+    -webkit-transition: 1s;
+    transition: 1s;
+    overflow: hidden;
+    display: block;
+  }
+  .more-about__slider.slide {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .more-about__slider.slide--1 {
+    z-index: 4;
+  }
+  .more-about__slider.slide--2 {
+    z-index: 3;
+  }
+  .more-about__slider.slide--3 {
+    z-index: 2;
+  }
+  .more-about__slider.slide--4 {
+    z-index: 1;
+  }
+  .more-about p {
+    margin-top: 20px;
+  }
+  .more-about__text {
+    color: #7A7A7A;
+  }
+  .more-about__card--1 {
+    width: 300px;
+    height: 300px;
+  }
+  .more-about__card--1 .more-about__img {
+    border-radius: 100%;
+    min-width: 180px;
+    min-height: 180px;
+    margin: 0 auto;
+    -webkit-box-shadow: 0px 4px 4px 2px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 4px 4px 2px rgba(0, 0, 0, 0.2);
+  }
+  .more-about__card--1 .more-about__img img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .more-about__card--2 {
+    width: 300px;
+    height: 300px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .more-about__card--2 .more-about__img {
+    border-radius: 100%;
+    width: 180px;
+    height: 180px;
+    margin: 0 auto;
+    overflow: hidden;
+    -webkit-box-shadow: 0px 4px 4px 2px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 4px 4px 2px rgba(0, 0, 0, 0.2);
+  }
+  .more-about__card--2 .more-about__img img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .more-about__card--3 {
+    width: 300px;
+    height: 300px;
+    border: 1px solid red;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .more-about__card--3 .more-about__img {
+    border: 1px solid red;
+    border-radius: 100%;
+    width: 180px;
+    height: 180px;
+    margin: 0 auto;
+  }
+  .more-about__card--3 .more-about__img img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .more-about__card--4 {
+    width: 300px;
+    height: 300px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .more-about__card--4 .more-about__img {
+    border-radius: 100%;
+    width: 180px;
+    height: 180px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  .more-about__card--4 .more-about__img img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .more-about__dots {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .more-about__dot {
+    z-index: 33;
+    border: none;
+    background: #D2D2D2;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    margin-right: 1.75rem;
+    cursor: pointer;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+  .more-about__dot:last-child {
+    margin: 0;
+  }
+  .more-about__dot--active {
+    background-color: #B6116E;
+    opacity: 1;
   }
 }
 

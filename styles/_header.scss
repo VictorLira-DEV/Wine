@@ -3,7 +3,7 @@
     width: 100%;
     padding: 30px;
     position: relative;
-    font-family: neoSans;
+    font-family: $neoSans;
     color: $white;
 
     &__slider_controls {
@@ -109,6 +109,7 @@
         }
     }
 
+    // media queries
     @media screen and (max-width: 1400px) {
         &__button {
             width: 30px;

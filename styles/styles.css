@@ -5,7 +5,7 @@
   width: 100%;
   padding: 30px;
   position: relative;
-  font-family: neoSans;
+  font-family: "neoSans";
   color: #ffffff;
 }
 
@@ -165,9 +165,7 @@
 }
 
 .wines__menu {
-  font-family: 'Lato', sans-serif;
-  font-weight: 700;
-  font-size: 16px;
+  font: 700  16px Lato, sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -287,8 +285,8 @@
 .wines__old-price span:last-of-type {
   background: #ee3e80;
   font-weight: 400;
-  text-transform: uppercase;
   font-size: 12px;
+  text-transform: uppercase;
   color: #ffffff;
   border-radius: 2px;
   padding: 3px;
@@ -307,12 +305,12 @@
 }
 
 .wines__socio > div:first-of-type {
+  font-weight: 300;
+  font-size: 10px;
   line-height: 1;
   margin-right: 10px;
-  font-weight: 300;
   text-transform: uppercase;
   color: #555555;
-  font-size: 10px;
 }
 
 .wines__socio > div:last-of-type {
@@ -325,8 +323,8 @@
 }
 
 .wines__nao-socio {
-  margin-top: 10px;
   font-size: 10px;
+  margin-top: 10px;
   color: #888888;
 }
 
@@ -336,9 +334,9 @@
 }
 
 .wines button {
-  background: #7ebc43;
   font-size: 14px;
   font-weight: 700;
+  background: #7ebc43;
   cursor: pointer;
   color: #ffffff;
   margin-top: 20px;
@@ -363,14 +361,14 @@
 }
 
 .payment h1 {
-  font-family: neoSans;
-  text-align: center;
+  font-family: "neoSans";
   font-size: 24px;
+  text-align: center;
   color: #002b46;
 }
 
 .payment h1 span:first-of-type {
-  font-family: 'neoSansBold';
+  font-family: "neoSansBold";
 }
 
 .payment h1 span:last-of-type {
@@ -462,7 +460,7 @@
 }
 
 .benefits {
-  font-family: 'neoSansBold';
+  font-family: "neoSansBold";
   text-align: center;
   padding: 56px 30px 90px 30px;
   background: #f5f5f5;
@@ -636,7 +634,7 @@
 }
 
 .modal h1 {
-  font-family: 'neoSans';
+  font-family: "neoSans";
   font-weight: 400;
   font-size: 18px;
 }
@@ -674,7 +672,7 @@
 }
 
 .more-about h1 {
-  font-family: 'neoSansBold';
+  font-family: "neoSansBold";
 }
 
 .more-about__cards-desktop-list {
@@ -923,11 +921,11 @@
 
 .podcast__social-media h1 span {
   font-weight: 700;
-  font-family: 'neoSans';
+  font-family: "neoSans";
 }
 
 .podcast__social-media h2 {
-  font-family: 'neoSans';
+  font-family: "neoSans";
   font-size: 2rem;
   font-weight: 200;
   text-transform: lowercase;
@@ -985,7 +983,7 @@
 
 .podcast__text {
   position: absolute;
-  font-family: 'neoSans';
+  font-family: "neoSans";
   padding: 44px 60px;
   top: 0;
   bottom: 0;

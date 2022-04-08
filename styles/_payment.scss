@@ -7,13 +7,13 @@
     
 
     h1 {
-        font-family: neoSans;
-        text-align: center;
+        font-family: $neoSans;
         font-size: 24px;
+        text-align: center;
         color: #002b46;
 
         span:first-of-type {
-            font-family: 'neoSansBold';
+            font-family: $neoSansBold;
         }
 
         span:last-of-type {
